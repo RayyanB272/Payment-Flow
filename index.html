@@ -1,19 +1,13 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>Checkout Flow</title>
 </head>
-
 <body>
-    <script src="script.js"></script>
-
-    <h3>Contact Form</h3>
-
     <div class="container">
-
         <div class="steps-indicator">
             <div class="step active" id="stepIndicator1"><span>1</span> Shipping</div>
             <div class="step" id="stepIndicator2"><span>2</span> Payment</div>
@@ -37,10 +31,10 @@
                 </div>
             </div>
 
-
-            <div class="checkout-form" novalidate>
+            <form class="checkout-form" id="checkout-form" novalidate>
+                
                 <div class="form-step active" id="step1">
-                    <h2>Shipping informations</h2>
+                    <h2>Shipping Information</h2>
 
                     <label for="name">Full Name</label>
                     <input type="text" id="name" placeholder="Full Name">
@@ -74,41 +68,44 @@
                     <label for="postal">Postal Code</label>
                     <input type="text" id="postal" placeholder="1000">
                     <small class="error"></small>
+                    
+                    <button type="button" class="nextBtn" id="nextBtn">Continue to Payment</button>
                 </div>
-                <button type="button" class="next-btn" id="next-btn">Continue to Payment</button>
-
-                <div class="form-step " id="step2">
-                    <h2>Payments Details</h2>
+                
+                <div class="form-step" id="step2">
+                    <h2>Payment Details</h2>
 
                     <label for="card-name">Name on Card</label>
                     <input type="text" id="card-name" placeholder="Card Name">
                     <small class="error"></small>
 
                     <label for="card-Number">Card Number</label>
-                    <input type="email" id="card-Number" placeholder="0000 0000 0000 0000">
+                    <input type="text" id="card-Number" placeholder="0000 0000 0000 0000">
                     <small class="error"></small>
 
                     <div class="row">
                         <div>
                             <label for="exp-date">Expiration Date</label>
-                            <input type="tel" id="exp-date" placeholder="MM/YY">
+                            <input type="text" id="exp-date" placeholder="MM/YY">
                             <small class="error"></small>
                         </div>
                         <div>
                             <label for="cvv">CVV</label>
-                            <input type="tel" id="cvv" placeholder="000">
+                            <input type="password" id="cvv" placeholder="000">
                             <small class="error"></small>
                         </div>
                     </div>
+                    
                     <div class="buttons">
                         <button type="button" class="backBtn" id="backBtn">Back</button>
-                        <button type="submit" id="submitBtn">Pay $127.35</button>
+                        <button type="submit" id="submitBtn">Pay $153.35</button>
                     </div>
+                    
                     <div id="status"></div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
