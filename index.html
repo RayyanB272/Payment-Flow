@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Checkout Flow</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <h3>Contact Form</h3>
+
+    <div class="container">
+
+        <div class="steps-indicator">
+            <div class="step active" id="stepIndicator1"><span>1</span> Shipping</div>
+            <div class="step" id="stepIndicator2"><span>2</span> Payment</div>
+        </div>
+
+        <div class="checkout">
+            <div class="summary">
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span class="label">Price</span>
+                    <span class="price">$127.35</span>
+                </div>
+                <div class="summary-row">
+                    <span class="label">Shipping</span>
+                    <span class="price">$15.00</span>
+                </div>
+                <hr class="divider">
+                <div class="summary-row total-row">
+                    <span class="label">Total</span>
+                    <span class="price">$153.35</span>
+                </div>
+            </div>
+
+
+            <div class="checkout-form" novalidate>
+                <div class="form-step active" id="step1">
+                    <h2>Shipping informations</h2>
+
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Full Name">
+                    <small class="error"></small>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="name@example.com">
+                    <small class="error"></small>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+961 12345678">
+                    <small class="error"></small>
+
+                    <div class="row">
+                        <div>
+                            <label for="country">Country</label>
+                            <input type="text" id="country" placeholder="Lebanon">
+                            <small class="error"></small>
+                        </div>
+                        <div>
+                            <label for="city">City</label>
+                            <input type="text" id="city" placeholder="Beirut">
+                            <small class="error"></small>
+                        </div>
+                    </div>
+
+                    <label for="address">Street Address</label>
+                    <input type="text" id="address" placeholder="Main st, Apt 2B">
+                    <small class="error"></small>
+
+                    <label for="postal">Postal Code</label>
+                    <input type="text" id="postal" placeholder="1000">
+                    <small class="error"></small>
+                </div>
+                <button type="button" class="next-btn" id="next-btn">Continue to Payment</button>
+
+                <div class="form-step " id="step2">
+                    <h2>Payments Details</h2>
+
+                    <label for="card-name">Name on Card</label>
+                    <input type="text" id="card-name" placeholder="Card Name">
+                    <small class="error"></small>
+
+                    <label for="card-Number">Card Number</label>
+                    <input type="email" id="card-Number" placeholder="0000 0000 0000 0000">
+                    <small class="error"></small>
+
+                    <div class="row">
+                        <div>
+                            <label for="exp-date">Expiration Date</label>
+                            <input type="tel" id="exp-date" placeholder="MM/YY">
+                            <small class="error"></small>
+                        </div>
+                        <div>
+                            <label for="cvv">CVV</label>
+                            <input type="tel" id="cvv" placeholder="000">
+                            <small class="error"></small>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="backBtn" id="backBtn">Back</button>
+                        <button type="submit" id="submitBtn">Pay $127.35</button>
+                    </div>
+                    <div id="status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
